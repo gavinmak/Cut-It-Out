@@ -46,3 +46,6 @@ def result():
             location = para.index(sentence[0])
             processed_text += para[location:location + len(sentence[0]) + 1] + " "
     return render_template("success.html", display = processed_text)
+
+if __name__ == '__main__':
+    app.run(debug=True, use_reloader=True)
