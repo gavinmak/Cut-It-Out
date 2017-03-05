@@ -10,7 +10,7 @@ def index():
 @app.route("/result", methods=["POST"])
 def result():
     # Imports the Google Cloud client library
-    from google.cloud import language
+    from google-cloud-python-master import language
     import numpy, re
     from scipy import stats
 

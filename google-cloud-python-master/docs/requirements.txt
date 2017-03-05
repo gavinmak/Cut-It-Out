@@ -1,0 +1,17 @@
+core/
+bigquery/
+bigtable/
+datastore/
+dns/
+language/
+logging/
+error_reporting/
+monitoring/
+pubsub/
+resource_manager/
+runtimeconfig/
+speech/
+storage/
+translate/
+vision/
+spanner/
