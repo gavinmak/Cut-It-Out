@@ -10,7 +10,7 @@ def index():
 @app.route("/result", methods=["POST"])
 def result():
     # Imports the Google Cloud client library
-    import google
+    from google.cloud import language
     import numpy, re
 
     # Instantiates a client
@@ -20,7 +20,6 @@ def result():
     para = request.form["text"]
     thresholdFactor = int(request.form["thresholdFactor"])
     text = re.split(r'[.!?]+', para)
-    print(text)
 
     pair_message = []
 
@@ -30,8 +29,6 @@ def result():
         # Detects the sentiment of the text
         sentiment = document.analyze_sentiment().sentiment
         pair_message.append([data, sentiment.magnitude])
-
-    print("Length of text", len(pair_message))
 
     mean_mag = numpy.mean([x[1] for x in pair_message])
     median_mag = numpy.median([x[1] for x in pair_message])
