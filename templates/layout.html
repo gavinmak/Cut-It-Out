@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta content="initial-scale=1, width=device-width" name="viewport"/>
+        <title>{% block title %}{% endblock %}</title>
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+
+        <!-- CSS Reset -->
+        <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+
+        <!-- Milligram CSS minified -->
+        <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+
+        <style>
+        html {
+            padding: 10% 20% 10% 20%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #cd989f;
+        }
+
+        body {
+            color: #FFFFFF;
+            font-size: 2.4rem;
+        }
+
+        form {
+            color: #FFFFFF;
+            font-size: 1.8rem;
+        }
+
+        h1 {
+            color: #FFFFFF;
+            font-size: 6rem;
+        }
+
+        label {
+            color: #FFFFFF;
+        }
+
+        textarea {
+            color: #FFFFFF;
+            border-color: #FFFFFF;
+            height: 50vh;
+        }
+
+        textarea:focus {
+            border-color: #000;
+            outline:none;
+        }
+
+        input.float-right {
+            background-color: transparent;
+            border: #FFFFFF;
+            color: #FFFFFF;
+            font-size: 1.6rem;
+        }
+
+        input.float-right:hover {
+            color: #cd989f;
+            border-color: #FFFFFF;
+            background-color: #FFFFFF;
+        }
+
+        input.float-right:focus {
+            border-color: #fff;
+        }
+
+        select {
+            color: #fff;
+            border-color: #fff;
+        }
+
+        select:focus {
+            border-color: #000;
+        }
+
+        option {
+            color: #000;
+        }
+        </style>
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+    </body>
+</html>

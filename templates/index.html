@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Summarize
+{% endblock %}
+
+{% block body %}
+<h1>Summarize.</h1>
+<form action="{{ url_for('result') }}" method="post">
+    <label for="text">Input</label>
+    <textarea name="text" id="text"></textarea>
+    <label for="thresholdFactor">How Much?</label>
+    <select name="thresholdFactor">
+      <option value="1">1: A lot of it.</option>
+      <option value="2">2: Most of it.</option>
+      <option value="3" selected="selected">3: A fair balance.</option>
+      <option value="4">4: The main ideas.</option>
+      <option value="5">5: Only the essentials.</option>
+    </select>
+    <input class="float-right" type="submit" value="Go!"/>
+</form>
+{% endblock %}
