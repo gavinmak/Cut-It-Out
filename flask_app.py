@@ -12,7 +12,6 @@ def result():
     # Imports the Google Cloud client library
     import google
     import numpy, re
-    from scipy import stats
 
     # Instantiates a client
     language_client = language.Client()
